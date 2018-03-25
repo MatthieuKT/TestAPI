@@ -4,6 +4,9 @@
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+}
+
+#infos {
+  background-color: #515151;
+  height: 100%;
 }

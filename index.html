@@ -4,22 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="libs/custom.css" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Simple map</title>
   </head>
   <body>
 
-    <div id="map"></div>
+
+    <!--map's container-->
+    <div id="map" class="col-md-8"></div>
+    <!--Les infos concernant les stations-->
+    <div id="infos" class="col-md-4"></div>
+
+
     <!--Google's map API-->
-    <script id ="GoogleAPI" async defer></script>
+    <script id ="GoogleAPI"></script>
     <!--Stockage des API key's dans un fichier à part (au moins pour le GitHub)-->
     <script type="text/javascript" src="config/parameters.js"></script>
     <!--ajaxGet function-->
     <script type="text/javascript" src="ajax.js"></script>
     <!--Init the Google's map-->
     <script type="text/javascript" src="map.js"></script>
-
-
-
 
   </body>
 </html>
