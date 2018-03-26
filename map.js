@@ -27,12 +27,20 @@ ajaxGet(JCDecauxKey, function(reponse) {
     var addressElt = document.getElementById("address");
     var bikesDispos = document.getElementById("dispo");
     var emptyPlaces = document.getElementById("empty");
+    var statusElt = document.getElementById("status");
     // https://developers.google.com/maps/documentation/javascript/examples/event-simple?hl=fr
     marker.addListener("click", function() {
       nameElt.textContent = data.name;
       addressElt.textContent = data.address;
       bikesDispos.textContent = data.available_bikes;
       emptyPlaces.textContent = data.available_bike_stands;
+      if (data.status === "OPEN") {
+        statusElt.style.color = "green";
+        statusElt.textContent = data.status;
+      } else {
+        statusElt.style.color = "red";
+        statusElt.textContent = data.status;
+      }
     })
   })
 

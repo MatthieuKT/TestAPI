@@ -1,14 +1,14 @@
 #map {
   height: 100%;
 }
-
 html, body {
   height: 100%;
-
 }
-
 #aside {
   background-color: #515151;
   color: white;
   height: 100%;
+}
+button {
+  color: black;
 }
