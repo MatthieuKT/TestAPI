@@ -6,7 +6,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     // Les coordonnées GPS de Créteil
     center: {lat: 48.7833, lng: 2.4667},
-    zoom: 13
+    zoom: 14
   });
 }
 
@@ -19,12 +19,20 @@ ajaxGet(JCDecauxKey, function(reponse) {
     // Création dynamique de marqueurs
     var marker = new google.maps.Marker({
     position: data.position,
-    map: map
+    map: map,
+    address: data.address
     });
 
+    var nameElt = document.getElementById("name");
+    var addressElt = document.getElementById("address");
+    var bikesDispos = document.getElementById("dispo");
+    var emptyPlaces = document.getElementById("empty");
     // https://developers.google.com/maps/documentation/javascript/examples/event-simple?hl=fr
     marker.addListener("click", function() {
-      console.log("yo");
+      nameElt.textContent = data.name;
+      addressElt.textContent = data.address;
+      bikesDispos.textContent = data.available_bikes;
+      emptyPlaces.textContent = data.available_bike_stands;
     })
   })
 
